@@ -1,3 +1,4 @@
+#ejercicio 1 del taller de pb del 27/04/2024, crear un algoritmo que de la suma de impares entre 2 numeros
 n=int(input("Ingresa el numero 1: "))
 m=int(input("Ingresa el numero 2: "))
 suma_imp=0
