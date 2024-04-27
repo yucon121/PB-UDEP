@@ -1,4 +1,4 @@
-#aloritmo que permite ingresar una determinada de numeros mientras el usuario desee seguir ingresando numeros, y saca el promedio de los mismos
+#algoritmo que permite ingresar una determinada de numeros mientras el usuario desee seguir ingresando numeros, y saca el promedio de los mismos
 suma=0
 cont=0
 resp="aun no responde"
