@@ -1,16 +1,51 @@
-#ejercicio 1 del taller de pb del 27/04/2024, crear un algoritmo que de la suma de impares entre 2 numeros
-n=int(input("Ingresa el numero 1: "))
-m=int(input("Ingresa el numero 2: "))
-suma_imp=0
-if n != m:
-    if n>m:
-        for i in range(m,n):
-            if i%2 !=0:
-                suma_imp+=i
-    else:
-        for i in range(n,m):
-            if i%2 !=0:
-                suma_imp+=i
-    print(f"El resultado es: {suma_imp}")
-else:
-    print("ha ingresado numeros iguales")
+inicio=True
+notas=[]
+while inicio==True:
+    print("Menu de calificaciones")
+    print("1. Registrar N calificaciones")
+    print("2. Mostrar calificaciones sin repetir")
+    print("3. Mostrar la calificacion mas baja")
+    print("4. Mostrar la calificacion mas alta")
+    print("5. Mostrar promedio de calificaciones")
+    print("6. Salir")
+    resp=int(input("Eliga una opcion: "))
+    match resp:
+        case 1:
+            N=int(input("Ingrese la cantidad de calificaciones a registrar: "))
+            for i in range(N):
+                nota=float(input("Ingresa la calificacion: "))
+                notas.append(nota)
+        case 2:
+            descarte=[]
+            for i in range(len(notas)):
+                if nota[i] not in descarte:
+                    descarte.append(nota[i])
+        case 3:
+            if len(notas)>0:
+                mayor=notas[0]
+                for i in range(len(notas)):
+                    if notas[i]>mayor:
+                        mayor=notas[i]
+                print(f"Calificacion mas alta: {mayor}")
+            else:
+                print("La lista esta vacia")
+        case 4:
+            if len(notas)>0:
+                menor=notas[0]
+                for i in range(len(notas)):
+                    if notas[i]<menor:
+                        menor=notas[i]
+                print(f"La calificacion menor es {menor}")
+            else:
+                print("La lista esta vacia")
+        case 5:
+            if len(notas)>0:
+                suma=0
+                for i in range(len(notas)):
+                    suma=suma+notas[i]
+                promedio=suma/len(notas)
+                print(f"El promedio es: {promedio} ")
+        case 6:
+            inicio=False
+        case _:
+            print("Opcion no valida")
