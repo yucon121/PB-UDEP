@@ -1,3 +1,4 @@
+#Menu de aleatorios que solo incluya los que no terminan ni en 1 ni en 4 y que no sean multiplos de 6, con una opcion de mostrar los multiplos de 3 que no terminan en 3
 import random
 inicio=True
 lista=[]
