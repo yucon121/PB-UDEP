@@ -1,3 +1,4 @@
+#codigo de gestion de notas
 inicio=True
 notas=[]
 while inicio==True:
